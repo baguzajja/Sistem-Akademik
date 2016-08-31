@@ -1,0 +1,80 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^go-(.*)\.html$ media.php?page=$1 [L]
+RewriteRule ^lap-(.*)-(.*)\.html$ media.php?page=$1&id=$2 [L]
+RewriteRule ^down-(.*)-(.*)\.html$ dounlut.php?PHPIdSession=$1&id=$2 [L]
+RewriteRule ^eksport-(.*)-(.*)\.html$ eksport.php?PHPIdSession=$1&id=$2 [L]
+RewriteRule ^export-(.*)-(.*)-(.*)-(.*)\.html$ eksport.php?PHPIdSession=$1&id=$2&bulan=$3&tahun=$4 [L]
+RewriteRule ^aksi-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2 [L]
+RewriteRule ^action-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&md=$3 [L]
+RewriteRule ^actions-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&md=$3&id=$4 [L]
+RewriteRule ^detail-(.*)-(.*)\.html$ detail.php?aksi=$1&id=$2 [L]
+
+RewriteRule ^get-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&id=$3 [L]
+RewriteRule ^git-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&id=$3&codd=$4&kode=$5 [L]
+RewriteRule ^nil-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&id=$3&codd=$4&kode=$5&ids=$6 [L]
+RewriteRule ^mhsw-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&id=$3&codd=$4 [L]
+
+RewriteRule ^in-(.*)-(.*)\.html$ media.php?page=$1&codd=$2 [L]
+RewriteRule ^on-(.*)-(.*)-(.*)\.html$ media.php?page=$1&codd=$2&kode=$3 [L]
+RewriteRule ^us-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&codd=$2&kode=$3&id=$4 [L]
+RewriteRule ^jadwal-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&codd=$2&kode=$3&id=$4&tahun=$5 [L]
+RewriteRule ^mtk-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&codd=$2&kode=$3&id=$4&tahun=$5&ids=$6 [L]
+RewriteRule ^editmtk-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&codd=$3&kode=$4&id=$5&tahun=$6&ids=$7&idjadwal=$8 [L]
+RewriteRule ^savenilai-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&codd=$3&kode=$4&id=$5&tahun=$6&ids=$7&idjadwal=$8&grade=$9&bobot=$10&idk=$11 [L]
+
+RewriteRule ^editjadwal-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&ID=$3&codd=$4&prog=$5&tahun=$6&id=$7 [L]
+RewriteRule ^adkrs-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&tahun=$3&jurusan=$4&program=$5&sms=$6&NIM=$7 [L]
+RewriteRule ^dis-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&codd=$3 [L]
+RewriteRule ^di-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&codd=$3&kode=$4 [L]
+RewriteRule ^dir-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ media.php?page=$1&PHPIdSession=$2&codd=$3&kode=$4&id=$5 [L]
+
+RewriteRule ^printjadwalkuliah-(.*)-(.*)-(.*)-(.*)\.html$ jadkulprint.php?ID=$1&codd=$2&prog=$3&tahun=$4 [L]
+
+RewriteRule ^cetak-(.*)-(.*)\.html$ print.php?Action=$1&id=$2 [L]
+RewriteRule ^AbDos-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&tahun=$2&prodi=$3&prog=$4&kdmtk=$5&kelas=$6 [L]
+RewriteRule ^cetakK-(.*)-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&tahun=$2&sms=$3&NIM=$4 [L]
+RewriteRule ^cetkal-(.*)-(.*)-(.*)\.html$ kalenderPdf.php?Action=$1&tahun=$2&sms=$3 [L]
+RewriteRule ^cetakMtk-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&id=$2&cod=$3 [L]
+RewriteRule ^cetaktrans-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&NIM=$2&prodi=$3 [L]
+RewriteRule ^cetakKu-(.*)-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&tahun=$2&ujian=$3&NIM=$4 [L]
+RewriteRule ^cetakJadwal-(.*)-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ print.php?Action=$1&identitas=$2&tahun=$3&program=$4&jurusan=$5&semester=$6 [L]
+
+RewriteRule ^getgroup-(.*)-(.*)-([0-9]+)\.html$ media.php?page=$1&PHPIdSession=$2&id_group=$3 [L]
+RewriteRule ^relgroup-(.*)-(.*)-([0-9]+)\.html$ media.php?page=$1&PHPIdSession=$2&relasi_modul=$3 [L]
+RewriteRule ^pdf-(.*)-(.*)\.html$ pdf.php?Action=$1&id=$2 [L]
+RewriteRule ^mtk-(.*)-(.*)-(.*)-(.*)\.html$ pdf.php?Action=$1&id=$2&group=$3&kur=$4 [L]
+RewriteRule ^Kpdf-(.*)-(.*)-(.*)-(.*)\.html$ pdf.php?Action=$1&tahun=$2&semester=$3&nim=$4 [L]
+RewriteRule ^Trdf-(.*)-(.*)-(.*)\.html$ pdf.php?Action=$1&nim=$2&jurusan=$3 [L]
+RewriteRule ^JdwalPdf-(.*)-(.*)-(.*)-(.*)-(.*)\.html$ pdf.php?Action=$1&tahun=$2&program=$3&jurusan=$4&semester=$5 [L]
+ErrorDocument 404 /404.php
+Options All -Indexes
+</IfModule>
+
+############### SET COOKIES DOMAIN ##################
+# Use Mod_deflate to compress static files
+<ifmodule mod_deflate.c>
+<filesmatch ".(js|css|ico|txt|htm|html|php)$">
+SetOutputFilter DEFLATE
+</filesmatch>
+</ifmodule>
+
+###### Speed up caching
+FileETag MTime Size
+
+###### Expires
+#ExpiresActive On
+#ExpiresDefault "access plus 366 days"
+
+###### Future Expires Headers
+#<filesmatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+#Header set Expires "Sat, 27 Dec 2014 23:59:59 GMT"
+#</filesmatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary Accept-Encoding
+  </FilesMatch>
+</IfModule>
+
+

@@ -1,0 +1,1 @@
+<?phpdefined('_FINDEX_') or die('Access Denied');//Simpan Pengaturanif(isset($_POST['DownloadLog'])) { 		}

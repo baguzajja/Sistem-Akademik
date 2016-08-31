@@ -1,0 +1,42 @@
+.month{
+    width:100%;
+    float:left;
+    border:1px solid #ccc;
+    margin-bottom:10px;
+    border-collapse:collapse;
+}
+
+.month td{
+    border:1px solid #ddd;
+    color:#333;
+    padding:3px;
+    text-align:center;
+}
+
+.month th {
+    padding:5px;
+	background-image: url(images/hbg.gif);
+	background-repeat: repeat-x;
+    color:#fff;
+	text-align:center;
+}
+
+.month td.today {
+	background-image: url(images/hbg.gif);
+	background-repeat: repeat-x;
+    color:#fff;
+    font-weight:bold; }
+
+.days{
+    background-color:#eeeeee;
+}
+.month td.pilih{
+    color:#FFF;
+	font-weight:bold;
+}
+.month td.minggu{
+	color:#FFF;
+	background-color:#ee0202;
+	font-weight:bold;
+}
+
