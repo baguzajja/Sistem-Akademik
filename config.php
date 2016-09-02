@@ -1,6 +1,6 @@
 <?php
 defined('_FINDEX_') or die('Access Denied');
-$DBName	= 'stieyapa_sia2014';
+$DBName	= 'user';
 $DBHost	= 'localhost';
 $DBUser	= 'root';
 $DBPass	= '';
