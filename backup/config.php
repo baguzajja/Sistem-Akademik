@@ -1,9 +1,9 @@
 <?php
 defined('_FINDEX_') or die('Access Denied');
-$DBName	= 'stieyapa_sia2014';
-$DBHost	= 'localhost';
-$DBUser	= 'stieyapa_mift4';
-$DBPass	= 'mift4p1j4t';
+$DBName	= '';
+$DBHost	= '';
+$DBUser	= '';
+$DBPass	= '';
 
 $koneksi=mysql_connect($DBHost,$DBUser,$DBPass);
 if (! $koneksi){
